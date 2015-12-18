@@ -11,7 +11,7 @@
   "author": "Pablo Andrés Dorado Suárez <pandres95@gentebool.com> (http://community.gentebool.com/pandres95)",
   "license": "GPL-3.0",
   "scripts": {
-    "test": "mocha --recursive --timeout 10000 test"
+    "test": "NODE_ENV=test mocha --recursive --timeout 10000 test"
   },
   "dependencies": {
     "async": "^1.4.2",
