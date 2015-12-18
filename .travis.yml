@@ -2,6 +2,8 @@ services: mysql
 language: node_js
 node_js:
   - 4.0
+before_script:
+  - mysql -e 'create database db_test;'
 install:
   - npm install
   - npm install bool.js@latest
