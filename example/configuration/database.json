@@ -7,6 +7,7 @@
 
     "test": {
         "host": "localhost",
+        "user": "root",
         "database": "db_test"
     },
 
