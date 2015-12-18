@@ -1,0 +1,39 @@
+{
+  "name": "booljs-mysql",
+  "version": "0.0.1",
+  "description": "MySQL driver for bool.js",
+  "main": "index.js",
+  "keywords": [
+    "bool.js",
+    "mongoose",
+    "driver"
+  ],
+  "author": "Pablo Andrés Dorado Suárez <pandres95@gentebool.com> (http://community.gentebool.com/pandres95)",
+  "license": "GPL-3.0",
+  "scripts": {
+    "test": "mocha --recursive --timeout 10000 test"
+  },
+  "dependencies": {
+    "async": "^1.4.2",
+    "mysql": "^2.10.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-as-promised": "^5.1.0",
+    "mocha": "^2.3.2",
+    "supertest": "^1.1.0",
+    "supertest-as-promised": "^2.0.2"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoolJS/booljs-mysql.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BoolJS/booljs-mysql/issues"
+  },
+  "homepage": "https://github.com/BoolJS/booljs-mysql#readme"
+}
