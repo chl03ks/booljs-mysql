@@ -39,10 +39,6 @@ describe('Dog', function () {
 
     describe('DAO', function () {
 
-        before(function () {
-            return q.nbind(Dog.collection.remove, Dog.collection)();
-        });
-
         it('retrieves an empty list', function (done) {
             Dog.test(function (err, data) {
                 if(err) return done(err);
@@ -54,10 +50,6 @@ describe('Dog', function () {
     });
 
     describe('Controller', function () {
-
-        before(function () {
-            return q.nbind(Dog.collection.remove, Dog.collection)();
-        });
 
         it('retrieves an empty list', function () {
 
