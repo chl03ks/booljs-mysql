@@ -12,7 +12,7 @@ describe('Promises-based connection', function () {
     var expect      = chai.expect;
 
     before(function () {
-        return booljs('com.example.api', [ require.resolve('..') ])
+        return booljs('com.example.promises', [ require.resolve('..') ])
             .setBase('example/promises')
             .setDatabaseLoader('booljs-mysql')
             .run()

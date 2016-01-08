@@ -12,7 +12,7 @@ describe('Pooled connection', function () {
     var expect      = chai.expect;
 
     before(function () {
-        return booljs('com.example.api', [ require.resolve('..') ])
+        return booljs('com.example.pooled', [ require.resolve('..') ])
             .setBase('example/pooled')
             .setDatabaseLoader('booljs-mysql')
             .run()

@@ -12,7 +12,7 @@ describe('Single connection', function () {
     var expect      = chai.expect;
 
     before(function () {
-        return booljs('com.example.api', [ require.resolve('..') ])
+        return booljs('com.example.single', [ require.resolve('..') ])
             .setBase('example/single')
             .setDatabaseLoader('booljs-mysql')
             .run()
