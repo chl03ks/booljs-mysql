@@ -1,7 +1,7 @@
 /* global describe, before, it */
 'use strict';
 
-describe('Dog', function () {
+describe('Single connection', function () {
     var booljs      = require('bool.js')
     ,   chai        = require('chai')
     ,   asPromised  = require('chai-as-promised')
@@ -13,7 +13,7 @@ describe('Dog', function () {
 
     before(function () {
         return booljs('com.example.api', [ require.resolve('..') ])
-            .setBase('example')
+            .setBase('example/single')
             .setDatabaseLoader('booljs-mysql')
             .run()
         .then(function (api) {

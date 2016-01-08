@@ -1,0 +1,22 @@
+{
+
+    "development": {
+        "host": "localhost",
+        "database": "db",
+        "pool": true
+    },
+
+    "test": {
+        "host": "localhost",
+        "user": "root",
+        "database": "db_test",
+        "pool": true
+    },
+
+    "production": {
+        "host": "example.com",
+        "database": "db",
+        "pool": true
+    }
+
+}
