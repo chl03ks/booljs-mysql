@@ -4,10 +4,9 @@ module.exports = function(app){
 
     var dog = new app.models.Dog();
 
-    return {
-        test: function(){
-            return dog.test();
-        }
+    this.test = function(){
+        return dog.test();
     };
 
+    return this;
 };
