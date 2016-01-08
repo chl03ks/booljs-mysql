@@ -1,6 +1,6 @@
 {
   "name": "booljs-mysql",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "MySQL driver for bool.js",
   "main": "index.js",
   "keywords": [
