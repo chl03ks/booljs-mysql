@@ -37,8 +37,8 @@ describe('Promises-based connection', function () {
 
     describe('DAO', function () {
 
-        it('retrieves an empty list', function (done) {
-            Dog.test().then(function (err, data) {
+        it('retrieves a single test element', function () {
+            return Dog.test().then(function (data) {
                 expect(data).to.have.length(1);
             });
         });
@@ -47,7 +47,7 @@ describe('Promises-based connection', function () {
 
     describe('Controller', function () {
 
-        it('retrieves an empty list', function () {
+        it('retrieves a single test element', function () {
 
             return agent.get('/dog').expect(200).then(function (response) {
                 expect(response.body.data).to.have.length(1);

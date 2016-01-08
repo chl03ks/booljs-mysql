@@ -39,7 +39,7 @@ describe('Single connection', function () {
 
     describe('DAO', function () {
 
-        it('retrieves an empty list', function (done) {
+        it('retrieves a single test element', function (done) {
             Dog.test(function (err, data) {
                 if(err) return done(err);
                 expect(data).to.have.length(1);
@@ -51,7 +51,7 @@ describe('Single connection', function () {
 
     describe('Controller', function () {
 
-        it('retrieves an empty list', function () {
+        it('retrieves a single test element', function () {
 
             return agent.get('/dog').expect(200).then(function (response) {
                 expect(response.body.data).to.have.length(1);
