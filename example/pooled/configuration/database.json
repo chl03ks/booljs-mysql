@@ -3,6 +3,7 @@
     "development": {
         "host": "localhost",
         "database": "db",
+        "user": "root",
         "pool": true
     },
 
@@ -16,6 +17,7 @@
     "production": {
         "host": "example.com",
         "database": "db",
+        "user": "root",
         "pool": true
     }
 
