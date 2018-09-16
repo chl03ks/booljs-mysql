@@ -1,36 +1,22 @@
 {
-  "name": "booljs-mysql",
-  "version": "0.1.1",
-  "description": "MySQL driver for bool.js",
+  "name": "@booljs/mysql",
+  "version": "1.0.0",
+  "description": "MySQL driver for BoolJS",
   "main": "index.js",
+  "license": "GPL-3.0",
+  "scripts": {
+    "pretest": "eslint **/*.js",
+    "test": "cross-env NODE_ENV=test mocha --exit --timeout 5000 test/_.js test/*"
+  },
   "keywords": [
     "bool.js",
     "mongoose",
     "driver"
   ],
-  "author": "Pablo Andrés Dorado Suárez <pandres95@gentebool.com> (http://community.gentebool.com/pandres95)",
-  "license": "GPL-3.0",
-  "scripts": {
-    "test": "NODE_ENV=test mocha --recursive --timeout 10000 test"
-  },
-  "dependencies": {
-    "async": "^1.4.2",
-    "mysql": "^2.10.0",
-    "mysql-wrap": "^0.5.3"
-  },
-  "devDependencies": {
-    "chai": "^3.2.0",
-    "chai-as-promised": "^5.1.0",
-    "mocha": "^2.3.2",
-    "supertest": "^1.1.0",
-    "supertest-as-promised": "^3.1.0"
-  },
-  "peerDependencies": {
-    "booljs-api": "0.3.x"
-  },
-  "directories": {
-    "example": "example",
-    "test": "test"
+  "author": {
+    "name": "Pablo Andrés Dorado Suárez",
+    "email": "hola@pablodorado.com",
+    "url": "https://pablodorado.com/"
   },
   "repository": {
     "type": "git",
@@ -39,5 +25,26 @@
   "bugs": {
     "url": "https://github.com/BoolJS/booljs-mysql/issues"
   },
-  "homepage": "https://github.com/BoolJS/booljs-mysql#readme"
+  "homepage": "https://github.com/BoolJS/booljs-mysql#readme",
+  "peerDependencies": {
+    "mysql2": "*",
+    "booljs.api": "0.5.x"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cross-env": "^5.0.1",
+    "eslint": "^4.2.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0",
+    "supertest-as-promised": "^4.0.2"
+  },
+  "dependencies": {
+    "booljs": "^0.7.16"
+  }
 }
