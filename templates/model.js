@@ -1,5 +1,9 @@
 'use strict';
 
-module.exports = function (app, connection) {
+const MySQLModel = require('@booljs/mysql/model');
 
+module.exports = class {{name}}Model extends MySQLModel {
+    constructor (app, connection) {
+
+    }
 };
