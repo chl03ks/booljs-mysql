@@ -1,5 +1,0 @@
-'host': 'localhost'
-'port': 8081
-'credentials':
-    'user': 'example'
-    'password': 'samplepass'

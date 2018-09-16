@@ -1,18 +1,21 @@
 'use strict';
 
-module.exports = function(app){
+module.exports = class DogController {
+    constructor (app) {
+        this.Dog = app.dao.Dog;
+        this.Json = app.views.Json;
+    }
 
-    var Dog     = app.dao.Dog
-    ,   json    = new app.views.Json();
+    list (request, response, next) {
+        const { Json, Dog } = this;
+        const dao = new Dog();
 
-    return {
-        list: function(req, res, next){
-            var dog = new Dog();
-            dog.test(function (err, data) {
-                if(err) return json.error(err, res);
-                json.standard(data, res);
-            });
-        }
-    };
+        dao.test((error, data) => {
+            if (error) {
+                return new Json().error(error, response);
+            }
 
+            new Json().standard(data, response);
+        });
+    }
 };
