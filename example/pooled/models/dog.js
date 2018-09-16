@@ -1,10 +1,15 @@
 'use strict';
 
-var dogs = [];
+const MySQLModel = require('../../../model');
 
-module.exports = function (app, connection) {
+module.exports = class DogModel extends MySQLModel {
+    constructor (app, connection) {
+        super();
+        this.connection = connection;
+    }
 
-    this.test = function(next) {
-        connection.query('SELECT 1;', next);
-    };
+    async test () {
+        const [ rows ] = await this.connection.promise().query('SELECT 1');
+        return rows;
+    }
 };

@@ -1,65 +1,49 @@
-/* global describe, before, it */
 'use strict';
 
+const Bool = require('booljs');
+
 describe('Single connection', function () {
-    var booljs      = require('bool.js')
-    ,   chai        = require('chai')
-    ,   asPromised  = require('chai-as-promised')
-    ,   supertest   = require('supertest-as-promised')
-    ,   app, Dog, dogDao, agent;
+    let model, dao, agent;
 
-    chai.use(asPromised);
-    var expect      = chai.expect;
+    before(async () => {
+        const { app, server } = await new Bool('com.example.single', [
+            require.resolve('..')
+        ]).setBase('example/single')
+            .setDatabaseDrivers('booljs.mysql')
+            .run();
 
-    before(function () {
-        return booljs('com.example.single', [ require.resolve('..') ])
-            .setBase('example/single')
-            .setDatabaseLoader('booljs-mysql')
-            .run()
-        .then(function (api) {
-            app = api.app;
-            Dog = new app.models.Dog();
-            dogDao = new app.dao.Dog();
-            agent = supertest(api.server);
-            return q.resolve();
-        });
+        model = new app.models.Dog();
+        dao = new app.dao.Dog();
+        agent = new Agent(server);
     });
 
-    describe('Model', function () {
+    describe('Model', () => it('retrieves a test element', done =>
+        model.test((error, data) => {
+            if (error !== undefined && error !== null) {
+                return done(error);
+            }
 
-        it('retrieves a test element', function (done) {
-            Dog.test(function (err, data) {
-                if(err) return done(err);
-                expect(data).to.have.length(1);
-                done();
-            });
-        });
+            expect(data).to.have.length(1);
+            done();
+        })
+    ));
 
+    describe('DAO', () => it('retrieves a test element', done =>
+        dao.test((error, data) => {
+            if (error !== undefined && error !== null) {
+                return done(error);
+            }
+
+            expect(data).to.have.length(1);
+            done();
+        })
+    ));
+
+    describe('Controller', () => {
+        it('retrieves a single test element', () => expect(agent
+            .get('/dog')
+            .expect(200)
+            .then(response => response.body.data)
+        ).to.eventually.have.length(1));
     });
-
-    describe('DAO', function () {
-
-        it('retrieves a single test element', function (done) {
-            Dog.test(function (err, data) {
-                if(err) return done(err);
-                expect(data).to.have.length(1);
-                done();
-            });
-        });
-
-    });
-
-    describe('Controller', function () {
-
-        it('retrieves a single test element', function () {
-
-            return agent.get('/dog').expect(200).then(function (response) {
-                expect(response.body.data).to.have.length(1);
-            });
-
-
-        });
-
-    });
-
 });
