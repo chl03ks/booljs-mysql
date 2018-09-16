@@ -1,10 +1,11 @@
 services: mysql
 language: node_js
 
-before_script:
-  - mysql -e 'create database db_test;'
 node_js:
   - lts/*
+
 install:
-  - npm install --no-save booljs@latest mysql2
   - npm install
+  - npm install --no-save booljs@latest mysql2
+before_script:
+  - mysql -e 'create database db_test;'
