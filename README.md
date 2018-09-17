@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/BoolJS/booljs-mysql.svg?branch=master)](https://travis-ci.org/BoolJS/booljs-mysql) [![Dependencies status for BoolJS](https://david-dm.org/booljs/booljs-mysql.svg)](https://david-dm.org/booljs/booljs-mysql) [![devDependency Status](https://david-dm.org/booljs/booljs-mysql/dev-status.svg)](https://david-dm.org/booljs/booljs-mysql#info=devDependencies) [![Code Climate](https://codeclimate.com/github/BoolJS/booljs-mysql/badges/gpa.svg)](https://codeclimate.com/github/BoolJS/booljs-mysql) [![Inline docs](http://inch-ci.org/github/booljs/booljs-mysql.svg?branch=master)](http://inch-ci.org/github/booljs/booljs-mysql)
 
-[![BoolJS NPM icon](https://nodei.co/npm/@booljs/mysql.png)](https://npmjs.com/packages/@booljs/mysql)
+[![BoolJS NPM icon](https://nodei.co/npm/@booljs/mysql.png)](https://npmjs.com/package/@booljs/mysql)
 
 [![Join the chat at https://gitter.im/BoolJS/booljs-mysql](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/BoolJS/booljs-mysql?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
