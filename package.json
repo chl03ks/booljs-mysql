@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "GPL-3.0",
   "scripts": {
-    "pretest": "eslint **/*.js",
+    "pretest": "eslint \"**/*.js\"",
     "test": "cross-env NODE_ENV=test mocha --exit --timeout 5000 test/_.js test/*"
   },
   "keywords": [
