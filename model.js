@@ -2,6 +2,4 @@
 
 const { DatabaseModel } = require('booljs.api');
 
-module.exports = class NoModel extends DatabaseModel {
-    constructor () { super(); }
-};
+module.exports = class NoModel extends DatabaseModel {};
