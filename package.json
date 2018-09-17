@@ -45,5 +45,8 @@
   },
   "dependencies": {
     "booljs": "^0.7.16"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

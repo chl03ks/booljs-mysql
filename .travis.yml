@@ -9,3 +9,11 @@ install:
   - npm install --no-save booljs@latest mysql2
 before_script:
   - mysql -e 'create database db_test;'
+
+deploy:
+  provider: npm
+  email: hola@pablodorado.com
+  api_key: $NPM_API_KEY
+  on:
+    branch: master
+    tags: true
