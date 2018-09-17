@@ -1,11 +1,11 @@
 {
   "name": "@booljs/mysql",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MySQL driver for BoolJS",
   "main": "index.js",
   "license": "GPL-3.0",
   "scripts": {
-    "pretest": "eslint **/*.js",
+    "pretest": "eslint \"**/*.js\"",
     "test": "cross-env NODE_ENV=test mocha --exit --timeout 5000 test/_.js test/*"
   },
   "keywords": [
@@ -33,18 +33,20 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "cross-env": "^5.0.1",
-    "eslint": "^4.2.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
     "mocha": "^5.2.0",
-    "supertest": "^3.3.0",
-    "supertest-as-promised": "^4.0.2"
+    "supertest": "^3.3.0"
   },
   "dependencies": {
     "booljs": "^0.7.16"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
