@@ -5,11 +5,11 @@ const MySQLModel = require('../../../model');
 module.exports = class DogModel extends MySQLModel {
     constructor (app, connection) {
         super();
-        this.connection = connection;
+        this.connection = await connection.promise();
     }
 
     async test () {
-        const [ rows ] = await this.connection.promise().query('SELECT 1');
+        const [ rows ] = this.connection.query('SELECT 1');
         return rows;
     }
 };
