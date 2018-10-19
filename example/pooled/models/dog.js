@@ -9,7 +9,9 @@ module.exports = class DogModel extends MySQLModel {
     }
 
     async test () {
-        const [ rows ] = this.connection.query('SELECT 1');
+        const { connection } = this;
+
+        const [ rows ] = connection.query('SELECT 1');
         return rows;
     }
 };
