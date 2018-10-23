@@ -3,12 +3,14 @@
 const MySQL = require('mysql2');
 const EmptyModel = require('./model');
 
-const { DatabaseLoader } = require('booljs.api');
+const { DatabaseLoader } = require('@booljs/api');
 const { readFileSync } = require('fs');
 const { join } = require('path');
 
 module.exports = class BoolJSMySQL extends DatabaseLoader {
-    constructor () { super('booljs.mysql'); }
+    constructor ({ connectionSettingsStoreName = 'mysql' } = {}) {
+        super('booljs.mysql', connectionSettingsStoreName);
+    }
 
     async openDatabase (configuration) {
         const settings = configuration[process.env.NODE_ENV || 'development'];
