@@ -28,6 +28,7 @@ module.exports = class BoolJSMySQL extends DatabaseLoader {
             connection = await MySQL.createConnection(connectionOptions);
         }
 
+        this.connection = connection;
         return connection;
     };
 
